@@ -1,15 +1,18 @@
+
+<h1> 99 Cats! </h1>
+<%= link_to "Add new cat!", new_cat_url %>
 <% @cats.each do  |cat| %>
-  <h1><%= link_to cat.name, cat_url(cat) %></h1>
+  <h2><%= link_to cat.name, cat_url(cat) %></h2>
 
   <table>
     <tr>
       <th>Attribute</th>
       <th>Value</th>
     </tr>
-    <!-- <tr>
+    <tr>
       <td>Age</td>
-      <td> <%#= cat.age %> </td>
-    </tr> -->
+      <td> <%= cat.age %> </td>
+    </tr>
     <tr>
       <td>Birth Date</td>
       <td> <%= cat.birth_date %> </td>

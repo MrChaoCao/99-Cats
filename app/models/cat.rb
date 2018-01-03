@@ -12,9 +12,13 @@
 #  description :text             not null
 #
 
+
+
 class Cat < ApplicationRecord
+  include ActionView::Helpers::DateHelper
+
   CAT_COLORS = ['black', 'white', 'orange', 'brown', 'gray', 'blue', 'calico']
-  
+
   validates :color, inclusion: { in: CAT_COLORS }, presence: true
   validates :sex, inclusion: { in: ['M', 'F'] }, presence: true
   validates :birth_date, :name, :description, presence: true

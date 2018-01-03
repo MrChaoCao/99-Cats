@@ -1,14 +1,15 @@
 <h1> <%= @cat.name %> </h1>
-<%= link_to 'Back to Cats', cats_url %>
+<%= link_to 'Back to Cats', cats_url %> <br>
+<%= link_to 'Edit Cat Info', edit_cat_url(@cat) %><br>
 <table>
   <tr>
     <th>Attribute</th>
     <th>Value</th>
   </tr>
-  <!-- <tr>
+  <tr>
     <td>Age</td>
-    <td> <%#= cat.age %> </td>
-  </tr> -->
+    <td> <%= @cat.age %> </td>
+  </tr>
   <tr>
     <td>Birth Date</td>
     <td> <%= @cat.birth_date %> </td>
